@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using Microsoft.EntityFrameworkCore.Migrations;
+using Microsoft.EntityFrameworkCore.Metadata;
 
 namespace AspNetCoreSpa.Migrations
 {
@@ -13,6 +14,7 @@ namespace AspNetCoreSpa.Migrations
                 columns: table => new
                 {
                     Id = table.Column<int>(nullable: false)
+                        .Annotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.SerialColumn)
                         .Annotation("Sqlite:Autoincrement", true),
                     ConcurrencyStamp = table.Column<string>(nullable: true),
                     Description = table.Column<string>(maxLength: 250, nullable: true),
@@ -29,6 +31,7 @@ namespace AspNetCoreSpa.Migrations
                 columns: table => new
                 {
                     Id = table.Column<int>(nullable: false)
+                        .Annotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.SerialColumn)
                         .Annotation("Sqlite:Autoincrement", true),
                     AccessFailedCount = table.Column<int>(nullable: false),
                     ConcurrencyStamp = table.Column<string>(nullable: true),
@@ -59,6 +62,7 @@ namespace AspNetCoreSpa.Migrations
                 columns: table => new
                 {
                     Id = table.Column<int>(nullable: false)
+                        .Annotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.SerialColumn)
                         .Annotation("Sqlite:Autoincrement", true),
                     Key = table.Column<string>(maxLength: 250, nullable: false)
                 },
@@ -72,6 +76,7 @@ namespace AspNetCoreSpa.Migrations
                 columns: table => new
                 {
                     Id = table.Column<int>(nullable: false)
+                        .Annotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.SerialColumn)
                         .Annotation("Sqlite:Autoincrement", true),
                     Description = table.Column<string>(maxLength: 100, nullable: true),
                     Locale = table.Column<string>(maxLength: 7, nullable: false)
@@ -129,6 +134,7 @@ namespace AspNetCoreSpa.Migrations
                 columns: table => new
                 {
                     Id = table.Column<int>(nullable: false)
+                        .Annotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.SerialColumn)
                         .Annotation("Sqlite:Autoincrement", true),
                     ClaimType = table.Column<string>(nullable: true),
                     ClaimValue = table.Column<string>(nullable: true),
@@ -150,6 +156,7 @@ namespace AspNetCoreSpa.Migrations
                 columns: table => new
                 {
                     Id = table.Column<int>(nullable: false)
+                        .Annotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.SerialColumn)
                         .Annotation("Sqlite:Autoincrement", true),
                     ClaimType = table.Column<string>(nullable: true),
                     ClaimValue = table.Column<string>(nullable: true),
@@ -215,6 +222,7 @@ namespace AspNetCoreSpa.Migrations
                 columns: table => new
                 {
                     Id = table.Column<int>(nullable: false)
+                        .Annotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.SerialColumn)
                         .Annotation("Sqlite:Autoincrement", true),
                     ContentId = table.Column<int>(nullable: false),
                     LanguageId = table.Column<int>(nullable: false),

@@ -6,7 +6,7 @@ namespace AspNetCoreSpa.Server.Entities
     public class Product
     {
         [Key]
-        public int _id { get; set; }
+        public long _id { get; set; }
         public string ProductName { get; set; }
         public string ProductCode { get; set; }
         public string[] Tags { get; set; }

@@ -75,7 +75,7 @@ namespace AspNetCoreSpa.Server.Extensions
                     }
                 };
             })
-            .AddEntityFrameworkStores<ApplicationDbContext, int>()
+            .AddEntityFrameworkStores<ApplicationDbContext, long>()
             .AddDefaultTokenProviders();
 
             return services;
@@ -146,7 +146,8 @@ namespace AspNetCoreSpa.Server.Extensions
                 }
                 else
                 {
-                    options.UseSqlServer(Startup.Configuration["Data:SqlServerConnectionString"]);
+                    // options.UseSqlServer(Startup.Configuration["Data:SqlServerConnectionString"]);
+                    options.UseNpgsql(Startup.Configuration["Data:PostgresSQLConnectionString"]);
                 }
                 options.UseOpenIddict();
             });
