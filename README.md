@@ -1,6 +1,5 @@
 
 
-<<<<<<< HEAD
 * [ASP.NET Core](http://www.dot.net/)
 * [Entity Framework Core](https://docs.efproject.net/en/latest/)
     * Both Sql Server and Sql lite databases are supported (Check installation instrcutions for more details)
@@ -31,10 +30,8 @@
 * [Serilog](https://serilog.net/) with [Seq](https://getseq.net/) support to manage structured logging.
 * [Swagger](http://swagger.io/) as Api explorer (Visit url **http://localhost:5000/swagger** after running the application). More [details](https://github.com/domaindrivendev/Swashbuckle.AspNetCore)
  
-## Pre-requisites
-=======
+
 ## Modified from Original Repo
->>>>>>> Changed Readme to reflect changes from original repo
 
 * Updated all dependencies to the latest
 * Added PostgreSQL support - Is the default now
